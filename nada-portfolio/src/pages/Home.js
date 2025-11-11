@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from "../assets/logo_nadayahia_uxui.png";
+
 
 import Header from "../components/Header"; 
+import Hero from '../components/Hero';
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
 <>
 
 <Header />
+<Hero />
 
 
 
