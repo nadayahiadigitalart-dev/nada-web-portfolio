@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from "../assets/logo_nadayahia_uxui.png";
 
-import "../Header.js";
+import Header from "../components/Header"; 
 
 
 const Home = () => {
