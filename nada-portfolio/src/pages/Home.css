@@ -11,6 +11,15 @@ body{
   /* margin-bottom: 200px; */
 }
 
+  .ab{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        align-items: flex-end;
+        justify-content: center;
+}
+
 .v{
     width: 100%;
  background-image: url("../assets/bg_log.png");
@@ -57,4 +66,104 @@ line-height: normal;
   border-radius: 1rem;
 border: 1px solid #0E8C88;
 
+}
+
+
+.aboutt_bg{
+   background-image: url("../assets/about_bbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.z{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* gap: 2%; */
+    
+}
+
+ .col2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        
+        /* width: 60%; */
+        
+        /* width: 800px; */
+    }
+
+    .f32{
+      color: #DBDBDB;
+
+font-family: Poppins;
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 0px;
+}
+
+.f16_2{
+   color: #DBDBDB;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 280;
+line-height: normal;
+width: 500px;
+}
+
+.z2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    width: 30%;
+    
+}
+
+.works{
+  width: 100%;
+  height: 230px;
+}
+
+   .col3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        
+        color: #DBDBDB;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+        
+        /* width: 600px; */
+    }
+
+    .col2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        
+        /* width: 60%; */
+        
+        /* width: 800px; */
+    }
+
+    .f16_2{
+   color: #DBDBDB;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 280;
+line-height: normal;
+width: 500px;
 }

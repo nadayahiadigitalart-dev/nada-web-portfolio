@@ -4,14 +4,7 @@
      color: var(--text-color); 
 }
 
-.f16{
-color: #e1e1e1;
-font-family: poppins;
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
+
 
 .header{
     width: 100%;
@@ -22,16 +15,7 @@ line-height: normal;
     gap: 45%;
 }
 
-.f16_color{
-  color:#0E8C88 ;
-font-family: poppins;
-font-size: 1rem;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
 
-margin: 0px;
-}
 
 .nav{
      

@@ -4,8 +4,12 @@ import Header from "../components/Header";
 import Hero from '../components/Hero';
 import Row_Section from '../components/Row_Section';
 import log from '../assets/bg_log.png';
+import uxuiworks from '../assets/game work ux ui.svg';
+import workssvg from '../assets/works.svg';
 
 import "./Home.css";
+import Button from '../components/Button';
+import ansiStyles from './../../node_modules/@isaacs/cliui/node_modules/ansi-styles/index';
 
 const Home = () => {
   return (
@@ -39,31 +43,29 @@ const Home = () => {
         </section>
       </article>
 
-       <section class="ab">
-        <div class="z">
-            <div class="col2">
-        <p class="f32">What makes my work<br></br> unique?</p>
-        <p class="f16_2">What sets my work apart is the blend of creativity and 
-            interactivity. I’ve led design projects in my university, built immersive 3D and AR websites, and created  UX driven games</p>
-            </div>
-        <img src="photos/game work ux ui.svg" alt="ux_ui_works"/>
-        </div>
 
-        <div class="z2" >
-            <img class="works" src="photos/works.svg" alt="uxui_works_all">
-            <div class="col3">
-            <p class="f16_2">Beside design, I love reading, sketching, drawing, walking, 
-                basketball, and solving mysteries in detective movies. Hobbies that
-                 inspire my creativity and design thinking..</p>
-                <p class="lined_bu">
-                    Get to know me
-            
-                    
-                </p>
-                
-            </div>
+<section className="ab">
+  <div className="z">
+    <div className="col2">
+      <p className="f32">What makes my work<br /> unique?</p>
+      <p className="f16_2">What sets my work apart is the blend of creativity and 
+          interactivity. I’ve led design projects in my university, built immersive 3D and AR websites, and created UX driven games</p>
+    </div>
+    <img src={uxuiworks} alt="ux_ui_works"/>
+  </div>
 
-    </section>
+  <div className="z2">
+    <img className="works" src={workssvg} alt="uxui_works_all"/>
+    <div className="col3">
+      <p className="f16_2">Beside design, I love reading, sketching, drawing, walking, 
+          basketball, and solving mysteries in detective movies. Hobbies that
+          inspire my creativity and design thinking..</p>
+   
+      <Button button="Get to know me" />
+    </div>
+  </div>
+</section>
+
 
 
 
