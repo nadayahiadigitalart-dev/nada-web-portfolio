@@ -1,0 +1,12 @@
+body{
+    background-color: #0A0A0D;
+}
+
+
+.about_bg{
+  background-image: url(../assets/about_bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* margin-bottom: 200px; */
+}

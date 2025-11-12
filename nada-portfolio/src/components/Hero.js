@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {  useEffect } from 'react';
 
 import uxui from "../assets/uxui1.svg";
 import uxui2 from "../assets/uxui2.svg";
@@ -11,7 +11,37 @@ import hero_vid from "../assets/Hailuo.mp4";
 import "./Hero.css";
 
 
+
+
+
  const Hero = () => {
+
+    useEffect(() => {
+    const handleLoad = () => {
+      // Show hero text and button first
+      setTimeout(() => {
+        const heroText = document.querySelector(".col_hero");
+        if (heroText) heroText.classList.add("show");
+      }, 400); // appear after 0.4s
+
+      // Then show category after 6s
+      setTimeout(() => {
+        const category = document.querySelector(".category");
+        if (category) category.classList.add("show");
+      }, 6000);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    // cleanup (important)
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+
+
+
     return ( 
 
 
@@ -22,7 +52,7 @@ import "./Hero.css";
 
         <div className="big_gap">
 
-        <div class="col_hero">
+        <div className="col_hero">
         <p className="hero_f">Dew of Ideas, Bloom of Design</p>
         <button id="hero-btn" className="lined_bu">View Projects</button>
         </div>
@@ -33,7 +63,7 @@ import "./Hero.css";
             <img src={uxui} alt="UX UI category"/>
             </div>
             
-            <div class="col_img">
+            <div className="col_img">
             <p className="f_light">3D Design</p>
             <img src={uxui2} alt="UX UI category"/>
 
@@ -76,9 +106,6 @@ import "./Hero.css";
 <br></br><br></br>
        
 
-  
-
-       
         
         </>
      );
