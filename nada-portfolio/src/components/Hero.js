@@ -16,28 +16,16 @@ import "./Hero.css";
 
  const Hero = () => {
 
-    useEffect(() => {
-    const handleLoad = () => {
-      // Show hero text and button first
-      setTimeout(() => {
-        const heroText = document.querySelector(".col_hero");
-        if (heroText) heroText.classList.add("show");
-      }, 400); // appear after 0.4s
+   useEffect(() => {
+  setTimeout(() => {
+    document.querySelector(".col_hero")?.classList.add("show");
+  }, 400);
 
-      // Then show category after 6s
-      setTimeout(() => {
-        const category = document.querySelector(".category");
-        if (category) category.classList.add("show");
-      }, 6000);
-    };
+  setTimeout(() => {
+    document.querySelector(".category")?.classList.add("show");
+  }, 6000);
+}, []);
 
-    window.addEventListener("load", handleLoad);
-
-    // cleanup (important)
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
 
 
 
