@@ -26,3 +26,7 @@
   will-change: transform;
   transform: translateX(0);
 }
+
+.siZe{
+    width: 70px;
+}
