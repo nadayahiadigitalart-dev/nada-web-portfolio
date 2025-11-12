@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
         // import React from "react";
         import showreelVideo from "../assets/Nad Yahia-22-101081-showreel2024--.mp4";
-        import uxuiCard from "../assets/uxui_home_card.png";
+        import uxui from "../assets/uxui_home_card.png";
+       
         
         import './ProjectSection';
 import Pcard from './Pcard';
@@ -17,7 +18,9 @@ const ProjectSection = () => {
       <section className="projects-section">
         <article className="horizontal-scroll">
          
-            <Pcard  t="ux ui design" />
+            <Pcard  t="ux ui design" img={uxui} tags={["Wireframe", "Prototype", "UI Design", "Research"]} />
+            <Pcard  t="3d design" img={uxui}  />
+
           {/* <section className="proj_cards">
             <video autoPlay muted loop playsInline width="500" height="300" controls>
               <source src={showreelVideo} type="video/mp4" />

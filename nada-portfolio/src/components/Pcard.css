@@ -30,19 +30,7 @@ background: rgba(24, 24, 24, 0);
         
 }
 
-.tags_layout{
-      display: flex;
-        flex-direction: row;
-      width: 400px;
 
-        display: flex;
-height: 1.25rem;
-align-items: flex-start;
-align-content: flex-start;
-gap: 0.5rem;
-align-self: stretch;
-flex-wrap: wrap;
-}
 
 .tag{
     display: flex;

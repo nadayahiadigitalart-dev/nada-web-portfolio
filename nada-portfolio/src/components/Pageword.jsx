@@ -7,8 +7,6 @@ const Pageword = (props) => {
         <p  className="f16_color">{props.word}</p>
 
 
-
-
     );
 }
  
