@@ -3,14 +3,16 @@ import Button from './Button';
 import Tag from './Tag';
 import uxuiCard from "../assets/uxui_home_card.png";
 
-const Pcard = () => {
+import './Pcard.css';
+
+const Pcard = (props) => {
     return (
 
 <>
  <section className="proj_cards">
             <div className="x">
               <div className="card_title">
-                <p className="f32">UX / UI Design </p>
+                <p className="f32">{props.t}</p>
                 <div className="tags_layout">
                  <Tag tag="ui design"/>
                  <Tag tag="wireframe"/>

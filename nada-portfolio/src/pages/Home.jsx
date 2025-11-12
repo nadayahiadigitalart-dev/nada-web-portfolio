@@ -67,8 +67,8 @@ const Home = () => {
   </div>
 </section>
 
- <ProjectSection />
- 
+ <ProjectSection   />
+
 
 
 

@@ -17,7 +17,7 @@ const ProjectSection = () => {
       <section className="projects-section">
         <article className="horizontal-scroll">
          
-            <Pcard />
+            <Pcard  t="ux ui design" />
           {/* <section className="proj_cards">
             <video autoPlay muted loop playsInline width="500" height="300" controls>
               <source src={showreelVideo} type="video/mp4" />
