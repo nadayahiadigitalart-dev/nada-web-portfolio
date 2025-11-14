@@ -7,9 +7,11 @@ import log from '../assets/bg_log.png';
 import uxuiworks from '../assets/game work ux ui.svg';
 import workssvg from '../assets/works.svg';
 
+
+
 import "./Home.css";
 import Button from '../components/Button';
-import ansiStyles from './../../node_modules/@isaacs/cliui/node_modules/ansi-styles/index';
+import ansiStyles from '@isaacs/cliui/node_modules/ansi-styles';
 import ProjectSection from '../components/ProjectSection';
 
 const Home = () => {
@@ -42,7 +44,6 @@ const Home = () => {
             <p className="f20">My Latest Showreel 2025</p>
           </div>
         </section>
-      </article>
 
 
 <section className="ab">
@@ -66,9 +67,17 @@ const Home = () => {
     </div>
   </div>
 </section>
+      </article>
 
  <ProjectSection   />
 
+   <section class="contact">
+                <div class="cont_col">
+                    <p class="f32">Let`s make something great together!</p>
+                    <p class="lined_bu">Contact me</p>
+                </div>
+                <img src="" alt="contact me NadaYahia UX UI 3D Graphic Design- contact.svg"/>
+            </section>
 
 
 

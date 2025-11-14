@@ -33,7 +33,7 @@ const Pcard = (props) => {
                <Button button="Explore Work"/>
               </a>
             </div>
-            <img className="siZe" src={props.img} alt="ux_ui_mockup_card" />
+            <img  src={props.img} alt="ux_ui_mockup_card" />
           </section>
 
 
