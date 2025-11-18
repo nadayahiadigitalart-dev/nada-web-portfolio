@@ -2,9 +2,18 @@ import React, { Component } from 'react';
 
 import './Tag';
  
-const Tag = ({ tags }) => {
+const Tag = (props) => {
     return ( 
+
 <>
+       <div class="tags_layout">
+                    <p class="tag">{props.tag}</p>
+                    <p class="tag">{props.tag}</p>
+                    <p class="tag">{props.tag}</p>
+                  
+
+                </div>
+
 
 
 
@@ -25,13 +34,13 @@ const Tag = ({ tags }) => {
 
     
  
-    <div className="tags_layout">
+    {/* <div className="tags_layout">
       {tags.map((tag, index) => (
         <p className="tag" key={index}>
           {tag}
         </p>
       ))}
-    </div>
+    </div> */}
     
 </>
   );
