@@ -13,14 +13,11 @@
 }
 
 
-
-
 .big_gap{
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-
 
 
 .col_hero{
@@ -36,7 +33,6 @@
 
   /* margin-bottom: 500px; */
 }
-
 
 
 .hero_f{
@@ -75,8 +71,6 @@ border-radius: 1.25rem;
 border: 1px solid #0E8C88;
 
 }
-
-
 
 
 .category{

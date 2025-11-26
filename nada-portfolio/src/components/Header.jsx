@@ -16,11 +16,11 @@ const Header = () => {
 
              <nav class="nav">
     <Pageword word="Home" />
-  <Navword words="Projects"/>
-  <Navword words="About me"/>
-  <Navword words="Blogs"/>
-  <Navword words="Contact me"/>
-  <Navword words="ع"/>
+  <Navword word="Projects"/>
+  <Navword word="About me"/>
+  <Navword word="Blogs"/>
+  <Navword word="Contact me"/>
+  <Navword word="ع"/>
 
   </nav>
 

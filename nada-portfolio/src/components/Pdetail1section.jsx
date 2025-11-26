@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "./Pdetail1section.css";
+
 
 const Pdetail1section = () => {
     return ( <>
@@ -15,13 +17,10 @@ const Pdetail1section = () => {
                     <p class="tag">3d</p>
                     <p class="tag">interior design</p>
                   
-
                 </div>
             </div>
 
-        </section> 
-    
-    
+        </section>
     
     </> );
 }

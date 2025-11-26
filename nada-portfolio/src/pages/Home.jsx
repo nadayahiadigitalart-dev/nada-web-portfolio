@@ -10,6 +10,10 @@ import workssvg from "../assets/works.svg";
 import "./Home.css";
 import Button from "../components/Button";
  import ProjectSection from "../components/ProjectSection";
+import Projectdetails from "./Projectdetails";
+import Footer from "../components/Footer";
+
+import tt from "../assets/tablet for portfolio 1.png"; 
 
 const Home = () => {
   return (
@@ -75,16 +79,20 @@ const Home = () => {
       <ProjectSection />
 
       <section class="contact">
-        {" "}
+        {/* {" "} */}
         <div class="cont_col">
           <p class="f32">Let`s make something great together!</p>
           <p class="lined_bu">Contact me</p>
         </div>
         <img
-          src=""
+          src={tt}
           alt="contact me NadaYahia UX UI 3D Graphic Design- contact.svg"
         />
       </section>
+
+      <Footer />
+
+
     </>
   );
 };
