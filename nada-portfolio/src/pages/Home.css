@@ -184,3 +184,10 @@ width: 500px;
 
     gap: 20%;
 }
+
+.cent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}

@@ -20,64 +20,6 @@ import Pcard from './Pcard';
 import Button from './Button';
 
 const ProjectSection = () => {
-  // useHorizontalScroll();
-  // // const scrollerRef = useHorizontalScroll(); 
-
-
-  //  const sectionRef = useRef(null);
-  // const scrollerRef = useRef(null);
-
-  //  useEffect(() => {
-  //   const section = sectionRef.current;
-  //   const scroller = scrollerRef.current;
-  //   if (!section || !scroller) return;
-
-  //   let maxScroll = scroller.scrollWidth - window.innerWidth;
-  //   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-  //   let ticking = false;
-
-  //   const onScroll = () => {
-  //     if (!ticking) {
-  //       window.requestAnimationFrame(() => {
-  //         const rect = section.getBoundingClientRect();
-  //         const start = -rect.top;
-  //         const totalScrollable = Math.max(1, rect.height - window.innerHeight);
-  //         const progress = clamp(start / totalScrollable, 0, 1);
-  //         const translateX = progress * maxScroll;
-  //         scroller.style.transform = `translateX(-${translateX}px)`;
-  //         ticking = false;
-  //       });
-  //       ticking = true;
-  //     }
-  //   };
-
-  //   const revealCards = () => {
-  //     const cards = scroller.querySelectorAll(".proj_cards");
-  //     cards.forEach((card) => {
-  //       const r = card.getBoundingClientRect();
-  //       if (r.left < window.innerWidth * 0.8 && r.left + r.width > 0) {
-  //         card.classList.add("visible");
-  //       } else {
-  //         card.classList.remove("visible");
-  //       }
-  //     });
-  //   };
-
-  //   window.addEventListener("scroll", onScroll, { passive: true });
-  //   window.addEventListener("scroll", revealCards, { passive: true });
-  //   window.addEventListener("resize", () => {
-  //     maxScroll = scroller.scrollWidth - window.innerWidth;
-  //     revealCards();
-  //   });
-
-  //   revealCards();
-  //   onScroll();
-
-  //   return () => {
-  //     window.removeEventListener("scroll", onScroll);
-  //     window.removeEventListener("scroll", revealCards);
-  //   };
-  // }, []);
 
 
 

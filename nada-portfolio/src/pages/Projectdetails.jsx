@@ -1,14 +1,16 @@
+// import React from 'react';
 import React, { Component } from 'react';
-import Pdetail1section from '../components/Pdetail1section';
 
-import "./Projectdetails.css";
+
+
+import Pd from '../components/Pd';
 
 
 const Projectdetails = () => {
     return ( <>
     
     
-     <Pdetail1section />
+     <Pd />
     
     
     

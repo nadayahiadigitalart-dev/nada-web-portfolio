@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import BounceCards from "../components/BounceCards";
 import Row_Section from "../components/Row_Section";
 import log from "../assets/bg_log.png";
 import uxuiworks from "../assets/game work ux ui.svg";
@@ -10,16 +11,49 @@ import workssvg from "../assets/works.svg";
 import "./Home.css";
 import Button from "../components/Button";
  import ProjectSection from "../components/ProjectSection";
-import Projectdetails from "./Projectdetails";
+// import Projectdetails from "./Projectdetails";
 import Footer from "../components/Footer";
 
 import tt from "../assets/tablet for portfolio 1.png"; 
+
+// import BounceCards from './BounceCards'
+
+const images = [
+  "https://picsum.photos/400/400?grayscale",
+  "https://picsum.photos/500/500?grayscale",
+  "https://picsum.photos/600/600?grayscale",
+  "https://picsum.photos/700/700?grayscale",
+  "https://picsum.photos/300/300?grayscale"
+];
+
+const transformStyles = [
+  "rotate(5deg) translate(-150px)",
+  "rotate(0deg) translate(-70px)",
+  "rotate(-5deg)",
+  "rotate(5deg) translate(70px)",
+  "rotate(-5deg) translate(150px)"
+];
+
+
 
 const Home = () => {
   return (
     <>
       <Header />
       <Hero />
+      <div className="cent">
+      <BounceCards
+  className="custom-bounceCards"
+  images={images}
+  containerWidth={500}
+  containerHeight={250}
+  animationDelay={1}
+  animationStagger={0.08}
+  easeType="elastic.out(1, 0.5)"
+  transformStyles={transformStyles}
+  enableHover={true}
+/>
+</div>
       <Row_Section
         f32="See How UX UI Projects Turn Into Experiences"
         f20_pink="Each project tells a different story.. from concept to execution."

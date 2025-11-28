@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import "./Pdetail1section.css";
+import "./Pd.css";
+import d3 from "../assets/3d.png";
 
 
-const Pdetail1section = () => {
+const Pd = () => {
     return ( <>
     
     <section class="photo_3d">
@@ -25,4 +26,4 @@ const Pdetail1section = () => {
     </> );
 }
  
-export default Pdetail1section;
+export default Pd;

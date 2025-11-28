@@ -16,7 +16,7 @@ const Header = () => {
 
              <nav class="nav">
     <Pageword word="Home" />
-  <Navword word="Projects"/>
+  {/* <Navword word="Projects"/> */}
   <Navword word="About me"/>
   <Navword word="Blogs"/>
   <Navword word="Contact me"/>
