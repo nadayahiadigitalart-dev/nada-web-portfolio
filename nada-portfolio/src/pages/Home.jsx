@@ -15,15 +15,24 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 
 import tt from "../assets/tablet for portfolio 1.png"; 
+import g from "../assets/geomtricnadayahia.png";
+import tshirt from "../assets/tshirt event.jpg";
+import eui from "../assets/globaloffshoringsummit.jpg";
+import global from "../assets/euitopachiver.jpg";
+import aicat from "../assets/aicat.jpg";
+
+import LiquidEther from '../components/LiquidEther';
+
+
 
 // import BounceCards from './BounceCards'
 
 const images = [
-  "https://picsum.photos/400/400?grayscale",
-  "https://picsum.photos/500/500?grayscale",
-  "https://picsum.photos/600/600?grayscale",
-  "https://picsum.photos/700/700?grayscale",
-  "https://picsum.photos/300/300?grayscale"
+  eui,
+  global,
+  tshirt,
+  g,
+  aicat
 ];
 
 const transformStyles = [
@@ -41,19 +50,27 @@ const Home = () => {
     <>
       <Header />
       <Hero />
-      <div className="cent">
-      <BounceCards
-  className="custom-bounceCards"
-  images={images}
-  containerWidth={500}
-  containerHeight={250}
-  animationDelay={1}
-  animationStagger={0.08}
-  easeType="elastic.out(1, 0.5)"
-  transformStyles={transformStyles}
-  enableHover={true}
-/>
+
+      <div style={{ width: '100%', height: 600, position: 'absoulote', zindex: -1 }}>
+  <LiquidEther
+    colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
+    mouseForce={20}
+    cursorSize={100}
+    isViscous={false}
+    viscous={30}
+    iterationsViscous={32}
+    iterationsPoisson={32}
+    resolution={0.5}
+    isBounce={false}
+    autoDemo={true}
+    autoSpeed={0.5}
+    autoIntensity={2.2}
+    takeoverDuration={0.25}
+    autoResumeDelay={3000}
+    autoRampDuration={0.6}
+  />
 </div>
+    
       <Row_Section
         f32="See How UX UI Projects Turn Into Experiences"
         f20_pink="Each project tells a different story.. from concept to execution."
@@ -110,12 +127,31 @@ const Home = () => {
         </section>
       </article>
 
-      <ProjectSection />
+      <ProjectSection tag1="UX Research" tag2="ui design"
+            tag3="wireframe" tag4="prototype" tag5="design system"    />
+
+         <br></br><br></br>
+
+        <div className="cent">
+          <p className="f32">Latest from My Blogs </p>
+      <BounceCards
+  className="custom-bounceCards"
+  images={images}
+  containerWidth={500}
+  containerHeight={250}
+  animationDelay={1}
+  animationStagger={0.08}
+  easeType="elastic.out(1, 0.5)"
+  transformStyles={transformStyles}
+  enableHover={true}
+/>
+</div>
+   <br></br><br></br>
 
       <section class="contact">
         {/* {" "} */}
         <div class="cont_col">
-          <p class="f32">Let`s make something great together!</p>
+          <p class="f32">Let`s make something <br></br>great together!</p>
           <p class="lined_bu">Contact me</p>
         </div>
         <img
@@ -123,6 +159,7 @@ const Home = () => {
           alt="contact me NadaYahia UX UI 3D Graphic Design- contact.svg"
         />
       </section>
+      <br></br><br></br>
 
       <Footer />
 

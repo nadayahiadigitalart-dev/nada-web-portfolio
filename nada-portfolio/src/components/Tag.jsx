@@ -8,8 +8,8 @@ const Tag = (props) => {
 <>
        <div class="tags_layout">
                     <p class="tag">{props.tag}</p>
-                    <p class="tag">{props.tag}</p>
-                    <p class="tag">{props.tag}</p>
+                    {/* <p class="tag">{props.tag}</p> */}
+                    {/* <p class="tag">{props.tag}</p> */}
                   
 
                 </div>

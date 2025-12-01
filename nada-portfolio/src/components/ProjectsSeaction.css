@@ -30,3 +30,15 @@
 .siZe{
     width: 70px;
 }
+
+.horizontal-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
