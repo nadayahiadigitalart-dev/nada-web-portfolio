@@ -1,0 +1,36 @@
+.skillcard,
+.uppercard {
+  margin-top: 50px;
+  transition: transform 1s ease-in-out; 
+  cursor: pointer; 
+}
+
+ .uppercard{
+      margin-bottom: 70px;
+    }
+
+    .skillcard, .uppercard:hover {
+   transform: perspective(1000px) rotateY(360deg) translateY(-50px);
+   /* border: 1px solid #09726E; */
+   /* border-radius: 20px; */
+   /* box-shadow: 0 20px 40px rgba(6, 107, 94, 0.3); */
+  /* transform: perspective(); */
+}
+
+.skillcard:hover{
+  transform: rotate(15deg);
+
+}
+
+
+    .cent{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 5%;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 100px;
+
+      perspective: 800px;
+    }
