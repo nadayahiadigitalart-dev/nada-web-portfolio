@@ -41,11 +41,13 @@ import "./Hero.css";
         <div className="big_gap">
 
         <div className="col_hero">
-        <p className="hero_f">
+          <p className='smalltext'>I am Nada Yahia</p>
+        <p className="hero_ff">
           {/* Dew of Ideas, Bloom of Design */}
-          Hi Iam Nada Yahia, UX UI Designer 
+         UX UI Designer 
 
           </p>
+          <p className='f16_ce'>Designing intuitive user experiences that truly fit users’ needs with a touch of creativity</p>
         <button id="hero-btn" className="lined_bu">View Projects</button>
         </div>
 

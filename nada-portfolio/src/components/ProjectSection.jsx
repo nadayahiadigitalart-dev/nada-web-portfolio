@@ -32,20 +32,20 @@ const ProjectSection = () => {
       <section className="projects-section">
         <article className="horizontal-scroll" ref={scrollerRef}>
           <Pcard t="UX UI Design" img={uxui} />
-          <Pcard t="3D Design" img={D} tag1="Product Design" tag2="Interior design"  />
-          <Pcard t="Front-end Development" img={F} tag1="HTML" tag2="CSS"  />
-          <Pcard t="Graphic Design" img={G} tag1="Illustrations" tag2="Social Media" />
+          <Pcard t="3D Design" img={D}  />
+          <Pcard t="Front-end Development" img={F} />
+          <Pcard t="Graphic Design" img={G}  />
 
           <section className="proj_cards">
             <div className="x">
               <div className="card_title">
                 <p className="f32">Motion Graphics</p>
-                <div className="tags_layout">
+                {/* <div className="tags_layout">
                   <p className="tag">Reels</p>
                   <p className="tag">Social media</p>
                   <p className="tag">2D</p>
                   <p className="tag">3D</p>
-                </div>
+                </div> */}
                 <br />
               </div>
               <Button button="Explore work" />

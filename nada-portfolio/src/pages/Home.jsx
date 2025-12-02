@@ -48,33 +48,11 @@ const transformStyles = [
 const Home = () => {
   return (
     <>
-      <Header />
-      <Hero />
-
-      <div style={{ width: '100%', height: 600, position: 'absoulote', zindex: -1 }}>
-  <LiquidEther
-    colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
-    mouseForce={20}
-    cursorSize={100}
-    isViscous={false}
-    viscous={30}
-    iterationsViscous={32}
-    iterationsPoisson={32}
-    resolution={0.5}
-    isBounce={false}
-    autoDemo={true}
-    autoSpeed={0.5}
-    autoIntensity={2.2}
-    takeoverDuration={0.25}
-    autoResumeDelay={3000}
-    autoRampDuration={0.6}
-  />
-</div>
     
-      <Row_Section
-        f32="See How UX UI Projects Turn Into Experiences"
-        f20_pink="Each project tells a different story.. from concept to execution."
-      />
+      <Header />
+    
+       <Hero />   
+   
 
       <article className="about_bg">
         <section className="vid">
@@ -127,8 +105,7 @@ const Home = () => {
         </section>
       </article>
 
-      <ProjectSection tag1="UX Research" tag2="ui design"
-            tag3="wireframe" tag4="prototype" tag5="design system"    />
+      <ProjectSection    />
 
          <br></br><br></br>
 

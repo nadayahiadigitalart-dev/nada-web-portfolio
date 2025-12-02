@@ -3,6 +3,19 @@ body{
     overflow-x: hidden;
 }
 
+.bodyy{
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top:0px;
+
+}
+
+.relative{
+  position: relative;
+  z-index: 2;
+}
+
 
 .about_bg{
   background-image: url(../assets/about_bg.svg);
