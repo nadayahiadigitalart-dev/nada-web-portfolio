@@ -9,6 +9,7 @@ import hero_vid from "../assets/Hailuo.mp4";
 
 
 import "./Hero.css";
+import Button from './Button';
 
 
 
@@ -48,7 +49,8 @@ import "./Hero.css";
 
           </p>
           <p className='f16_ce'>Designing intuitive user experiences that truly fit users’ needs with a touch of creativity</p>
-        <button id="hero-btn" className="lined_bu">View Projects</button>
+        {/* <button id="hero-btn" className="lined_bu">View Projects</button> */}
+        <Button button="view projects" />
         </div>
 
         <div class="category">

@@ -24,7 +24,6 @@ import aicat from "../assets/aicat.jpg";
 import LiquidEther from '../components/LiquidEther';
 
 
-
 // import BounceCards from './BounceCards'
 
 const images = [
@@ -138,9 +137,7 @@ const Home = () => {
       </section>
       <br></br><br></br>
 
-      <Footer />
-
-
+      <Footer /> 
     </>
   );
 };

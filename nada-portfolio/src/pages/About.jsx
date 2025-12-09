@@ -5,6 +5,9 @@ import './About.css';
 
 import nada from "../assets/nadayahiauxuidesignerillustration.svg";
 import Skills_section from '../components/Skills_section';
+import R_Row from '../components/R_Row';
+import R_Row_reverse from '../components/R_Row_reverse';
+import gameux from '../assets/sandoftime.png';
 
 const About = () => {
     return ( <>
@@ -26,6 +29,23 @@ const About = () => {
         <Skills_section />
 
 
+        <div className='cent_roles'>
+            <p className='t'>Roles I experenced while working on projects</p>
+            <div className='col_roles'>
+            <R_Row t="Sands of time website & AR Game" p='As an Interaction designer in this project, 
+            I worked on creating wireframes, uderstanding how users interact & lead him in VR game 
+            and was responsible for making animations in website, game.'  src={gameux} />
+
+             <R_Row_reverse t="AI Design Mentor App" p='I had the opportunity to act as product manager 
+             in a team. where I gained leadership skills and understand the relationship between 
+             UX UI Design &  business needs.' src={gameux} />
+
+             <R_Row t="IEEE SB website" p='As a UX UI designer I worked with team to create an 
+             official website for IEEE. I analyzing usability issues & suggested what to enhance 
+             or change, created mood board &  collaborating closely with my team to create the final 
+             handoff-ready design.' src={gameux} />
+            </div>
+        </div>
 
 
 

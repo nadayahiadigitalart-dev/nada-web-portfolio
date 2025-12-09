@@ -4,8 +4,7 @@ const ProjButton = (props) => {
     return ( <>
 
     <div className='button'>{props.category}</div>
-    
-    
+
     
     </>  );
 }

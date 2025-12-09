@@ -7,7 +7,7 @@ const Button = (props) => {
     return ( 
         <>
 
-         <p class="lined_bu">
+         <p className="lined_bu">
                 {props.button}
             </p>
         
