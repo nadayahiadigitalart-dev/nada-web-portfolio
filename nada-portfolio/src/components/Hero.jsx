@@ -6,6 +6,10 @@ import uxui3 from "../assets/uxui3.svg";
 import uxui4 from "../assets/uxui4.svg";
 import uxui5 from "../assets/uxui5.svg";
 import hero_vid from "../assets/Hailuo.mp4";
+import mm from "../assets/mmm.png";
+import m from "../assets/mm.png";
+
+
 
 
 import "./Hero.css";
@@ -17,14 +21,29 @@ import Button from './Button';
 
  const Hero = () => {
 
-   useEffect(() => {
-  setTimeout(() => {
+//    useEffect(() => {
+//   setTimeout(() => {
+//     document.querySelector(".col_hero")?.classList.add("show");
+//   }, 400);
+
+//   setTimeout(() => {
+//     document.querySelector(".category")?.classList.add("show");
+//   }, 6000);
+// }, []);
+
+useEffect(() => {
+
+ setTimeout(() => {
     document.querySelector(".col_hero")?.classList.add("show");
   }, 400);
 
+  // Images appear later (slower & elegant)
   setTimeout(() => {
-    document.querySelector(".category")?.classList.add("show");
-  }, 6000);
+    document.querySelectorAll(".hero-img").forEach(img => {
+      img.classList.add("show");
+    });
+  }, 2200); // ⬅ longer delay
+
 }, []);
 
 
@@ -39,6 +58,8 @@ import Button from './Button';
 
          <section className="hero">
 
+<div className='rw'>
+          <img  className="hero-img right"  src={mm} alt='right_uxui_photo' />
         <div className="big_gap">
 
         <div className="col_hero">
@@ -48,12 +69,19 @@ import Button from './Button';
          UX UI Designer 
 
           </p>
-          <p className='f16_ce'>Designing intuitive user experiences that truly fit users’ needs with a touch of creativity</p>
+          <p className='f16_ce'>I design intuitive user experiences that truly fit users’ needs with a touch of creativity</p>
         {/* <button id="hero-btn" className="lined_bu">View Projects</button> */}
         <Button button="view projects" />
         </div>
 
-        <div class="category">
+
+        </div>
+          <img 
+          // className='ph'
+          className="hero-img left" 
+           src={m} alt='left_uxui_photo' />
+
+        {/* <div class="category">
             <div className="col_img">
             <p className="f_light">UX UI Design</p>
             <img src={uxui} alt="UX UI category"/>
@@ -83,7 +111,9 @@ import Button from './Button';
 
             </div>
 
-        </div>
+        </div> */}
+
+        
 
         </div>
 

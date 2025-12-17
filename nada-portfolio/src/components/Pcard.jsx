@@ -38,11 +38,17 @@ const Pcard = (props) => {
       
                <br></br><br></br>
               {/* </div> */}
+              <div className={`reveal ${showImg ? "show" : ""}`}>
               <a className="a" href="UXUI_Projectdetails1.html">
                <Button button="Explore Work"/>
               </a>
+              </div>
+              
             </div>
-            <img  src={props.img} alt="ux_ui_mockup_card" />
+            <img 
+            // className="pcard-img"
+             className={`pcard-img ${showImg ? "show" : ""}`}
+             src={props.img} alt="ux_ui_mockup_card" />
           </section> 
 
 

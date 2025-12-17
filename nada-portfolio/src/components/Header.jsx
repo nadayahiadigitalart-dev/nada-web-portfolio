@@ -15,7 +15,7 @@ const Header = () => {
             <img src={logo} alt="Nada_logo_ux ui designer" />
 
              <nav class="nav">
-    <Pageword word="Home" />
+    <Pageword w="Home" />
   <Navword word="Projects"/>
   <Navword word="About me"/>
   <Navword word="Blogs"/>

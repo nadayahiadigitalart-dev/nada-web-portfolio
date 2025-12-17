@@ -184,11 +184,12 @@ width: 500px;
 
 
 
-.cent{
+.cente{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 
 }
 
@@ -198,4 +199,5 @@ width: 500px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }

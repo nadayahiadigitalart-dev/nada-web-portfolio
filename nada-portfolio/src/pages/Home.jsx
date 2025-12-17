@@ -153,7 +153,7 @@ const Home = () => {
 
          <br></br><br></br>
 
-        <div className="cent">
+        <div className="cente">
           <p className="f32">Latest from My Blogs </p>
       <BounceCards
   className="custom-bounceCards"

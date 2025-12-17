@@ -4,7 +4,7 @@ import "./Pageword.css";
 const Pageword = (props) => {
     return ( 
         
-        <p  className="f16_color">{props.word}</p>
+        <p  className="f16_color">{props.w}</p>
 
 
     );
