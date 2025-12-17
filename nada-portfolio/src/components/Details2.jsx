@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import './Details1';
+import './Details2.css';
 
 const Details2 = (props) => {
     return ( <>
 
       <div className='details'>
 
+        <div className='row_boxes'>
         <div className='box1'>
             <h1 className='title'>{props.title0}</h1>
             <p className='desc'>{props.des1}</p>
         </div>
+        
+
 
         <div className='box2'>
             <h2 className='title'>
@@ -33,6 +36,7 @@ const Details2 = (props) => {
                 {props.tag3}
                
             </div>
+        </div>
         </div>
 
         <div className='box3'>

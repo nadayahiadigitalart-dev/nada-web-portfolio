@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Details2.css';
 
 const Details1 = (props) => {
     return ( <>

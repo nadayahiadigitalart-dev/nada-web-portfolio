@@ -12,12 +12,14 @@ import group169 from '../assets/Group 169.png';
 
 
 import uxui1 from '../assets/3d_2.png';
+import Contact from './../components/Contact';
+import Footer from './../components/Footer';
 
 
 const Projectdetails = () => {
     return ( <>
     
-    <div className='' >
+    <div className='mid' >
 
     <Header/>
 
@@ -84,8 +86,11 @@ Objective: To create a digital booth concept that feels real and can be experien
 
     <img src={group169}  />
 
+    </div>
 
-    {/* </div> */}
+    <Contact />
+
+    <Footer />
 
 
     
