@@ -22,6 +22,13 @@ import global from "../assets/euitopachiver.jpg";
 import aicat from "../assets/aicat.jpg";
 
 import LiquidEther from '../components/LiquidEther';
+import Contact from "../components/Contact";
+import Pcard from "../components/Pcard";
+
+import uxui from "../assets/uxui_home_card.png";
+import D from "../assets/3D booth card.png";
+import F from "../assets/dev_card.png";
+import G from "../assets/graphic_design_tshirt_card.png";
 
 
 // import BounceCards from './BounceCards'
@@ -47,13 +54,35 @@ const transformStyles = [
 const Home = () => {
   return (
     <>
-    
+    <div className="bodyy">
+     <LiquidEther
+    colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
+    mouseForce={20}
+    cursorSize={100}
+    isViscous={false}
+    viscous={30}
+    iterationsViscous={32}
+    iterationsPoisson={32}
+    resolution={0.5}
+    isBounce={false}
+    autoDemo={true}
+    autoSpeed={0.5}
+    autoIntensity={2.2}
+    takeoverDuration={0.25}
+    autoResumeDelay={3000}
+    autoRampDuration={0.6}
+  />
+
+  </div>
+
       <Header />
     
        <Hero />   
    
 
-      <article className="about_bg">
+      <article 
+      // className="about_bg"
+      >
         <section className="vid">
           <img src={log} className="v" alt="bg_log.png" />
 
@@ -86,25 +115,41 @@ const Home = () => {
                 immersive 3D and AR websites, and created UX driven games
               </p>
             </div>
-            <img src={uxuiworks} alt="ux_ui_works" />
+              <Button button="Get to know me" />
+
+            {/* <img src={uxuiworks} alt="ux_ui_works" /> */}
           </div>
 
           <div className="z2">
             <img className="works" src={workssvg} alt="uxui_works_all" />
+            <br></br>
             <div className="col3">
-              <p className="f16_2">
+              {/* <p className="f16_2">
                 Beside design, I love reading, sketching, drawing, walking,
                 basketball, and solving mysteries in detective movies. Hobbies
                 that inspire my creativity and design thinking..
-              </p>
+              </p> */}
 
-              <Button button="Get to know me" />
             </div>
           </div>
         </section>
       </article>
 
-      <ProjectSection    />
+      <br></br>
+      <br></br>
+      <br></br>
+
+
+      {/* <ProjectSection   /> */}
+
+      <section className="proj_sec">
+
+      <Pcard t="UX UI Design" img={uxui} />
+          <Pcard t="3D Design" img={D}  />
+          <Pcard t="Front-end Development" img={F} />
+          <Pcard t="Graphic Design" img={G}  />
+
+          </section>
 
          <br></br><br></br>
 
@@ -124,18 +169,7 @@ const Home = () => {
 </div>
    <br></br><br></br>
 
-      <section class="contact">
-        {/* {" "} */}
-        <div class="cont_col">
-          <p class="f32">Let`s make something <br></br>great together!</p>
-          <p class="lined_bu">Contact me</p>
-        </div>
-        <img
-          src={tt}
-          alt="contact me NadaYahia UX UI 3D Graphic Design- contact.svg"
-        />
-      </section>
-      <br></br><br></br>
+   <Contact />
 
       <Footer /> 
     </>

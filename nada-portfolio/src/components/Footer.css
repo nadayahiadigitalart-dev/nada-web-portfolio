@@ -14,3 +14,79 @@
   align-items: center;
   gap: 20px;
 }
+
+.ro_social .a img {
+  width: 28px;          /* adjust size */
+  height: 28px;
+  transition: 
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.ro_social .a:hover img {
+  transform: translateY(-4px) scale(1.1);
+  opacity: 0.85;
+  filter: brightness(1.2);
+}
+
+
+
+.f16_{
+  color: #D9D9D9;
+font-family: Poppins;
+font-size: 0.99rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.icon_rights{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.row_links{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  height: 30px;
+}
+
+.col_links{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.l{
+  color: #D9D9D9;
+font-family: Poppins;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.row_links .l {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.row_links .l:hover {
+  color: #0E8C88;
+}
+
+
+
+

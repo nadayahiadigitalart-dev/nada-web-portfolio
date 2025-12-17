@@ -6,6 +6,7 @@ import Projectdetails from './pages/Projectdetails';
 import THREEDProj from './pages/THREEDProj';
 import Projects from './pages/Projects';
 import About from './pages/About';
+import TestAPI from './TestAPI';
   const Routing = () => {
     return ( 
         <BrowserRouter>
@@ -15,6 +16,7 @@ import About from './pages/About';
             <Route path='/3D projectss' element={<THREEDProj />} />
             <Route path='/proj' element={<Projects />} />
             <Route path='/about' element={<About />} />
+            <Route path='/test' element={<TestAPI/>}/>
 
 
 

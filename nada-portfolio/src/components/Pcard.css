@@ -9,26 +9,38 @@ width: 49.625rem;
 height: 34rem;
 flex-shrink: 0;
 
+/* border-radius: 1.25rem;
+background: rgba(24, 24, 24, 0); */
+
 border-radius: 1.25rem;
-background: rgba(24, 24, 24, 0);
+background: rgba(24, 24, 24, 0.56);
 }
 
 .x{
      display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-start;
-        /* gap: 0.625rem; */
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        gap: 0.3rem;
 }
 
 .card_title{
     display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         /* gap: 0.625rem; */
+
+       
         
 }
+
+/* .c{
+width: 49.625rem;
+height: 34rem;
+border-radius: 1.25rem;
+background: rgba(24, 24, 24, 0.56);
+} */
 
 
 
@@ -73,3 +85,27 @@ margin: 0px;
 /* .siZe{
     width: 500px;
 } */
+
+.proj_cards {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Image initial state */
+.pcard-img {
+  width: 100%;
+  margin-top: 20px;
+
+  opacity: 0;
+  transform: translateY(-30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+/* When hover happens ONCE */
+.pcard-img.show {
+  opacity: 1;
+  transform: translateY(0);
+}

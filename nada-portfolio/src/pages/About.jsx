@@ -8,6 +8,9 @@ import Skills_section from '../components/Skills_section';
 import R_Row from '../components/R_Row';
 import R_Row_reverse from '../components/R_Row_reverse';
 import gameux from '../assets/sandoftime.png';
+import svg_ai from '../assets/aidesignmentor.svg';
+import ieee_events from '../assets/ieee_events.png';
+
 
 const About = () => {
     return ( <>
@@ -38,15 +41,14 @@ const About = () => {
 
              <R_Row_reverse t="AI Design Mentor App" p='I had the opportunity to act as product manager 
              in a team. where I gained leadership skills and understand the relationship between 
-             UX UI Design &  business needs.' src={gameux} />
+             UX UI Design &  business needs.' src={svg_ai} />
 
              <R_Row t="IEEE SB website" p='As a UX UI designer I worked with team to create an 
              official website for IEEE. I analyzing usability issues & suggested what to enhance 
              or change, created mood board &  collaborating closely with my team to create the final 
-             handoff-ready design.' src={gameux} />
+             handoff-ready design.' src={ieee_events} />
             </div>
         </div>
-
 
 
     </div>
