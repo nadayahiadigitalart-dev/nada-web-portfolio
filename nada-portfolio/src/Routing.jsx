@@ -15,6 +15,8 @@ import TestAPI from './TestAPI';
             <Route path='/3D projects' element={<Projectdetails />} />
             <Route path='/3D projectss' element={<THREEDProj />} />
             <Route path='/projects' element={<Projects />} />
+            <Route path='/projectdetail3d1' element={<Projectdetails />} />
+
             <Route path='/about' element={<About />} />
             <Route path='/test' element={<TestAPI/>}/>
 

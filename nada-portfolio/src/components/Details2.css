@@ -1,0 +1,30 @@
+.box1{
+ width: 36.875rem;
+height: 12.375rem;
+   border-radius: 1.25rem;
+background: #151515;
+}
+
+.title{
+    color: #FFF;
+font-family: Poppins;
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+
+}
+
+.desc{
+
+    height: 7.25rem;
+flex-shrink: 0;
+align-self: stretch;
+color: #FFF;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
