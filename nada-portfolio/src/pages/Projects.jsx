@@ -181,7 +181,10 @@ const [activeCat, setActiveCat] = useState(categories[0]);
   {categories.map((cat) => (
     <button
       key={cat}
-      className={`button ${activeCat === cat ? "active" : ""}`}
+      className={`
+        
+        b
+        ${activeCat === cat ? "active" : ""}`}
       onClick={() => setActiveCat(cat)}
     >
       {cat}

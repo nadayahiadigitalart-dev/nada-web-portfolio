@@ -30,6 +30,8 @@ import D from "../assets/3D booth card.png";
 import F from "../assets/dev_card.png";
 import G from "../assets/graphic_design_tshirt_card.png";
 
+import { Helmet } from "react-helmet";
+
 
 // import BounceCards from './BounceCards'
 
@@ -54,6 +56,16 @@ const transformStyles = [
 const Home = () => {
   return (
     <>
+
+    <Helmet>
+        <title>Nada Yahia | UX/UI Designer</title>
+        <meta name="description" content="This is the about page" />
+        <meta property="og:title" content="About Us" />
+        <meta property="og:image" content="/images/about.png" />
+          <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+      </Helmet>
+
+
     <div className="bodyy">
      <LiquidEther
     colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
