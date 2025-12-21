@@ -75,7 +75,6 @@ import Header from '../components/Header';
         </div>
         </div>
 
-
          <label>Subject</label>
         <input onChange={(i)=>{setSubject(i.target.value)}} type='text' />
 
@@ -83,7 +82,7 @@ import Header from '../components/Header';
         <textarea className='label' onChange={(i)=>{setMsg(i.target.value)}} />
         {/* <button className='send'>Send</button> */}
         
-        </form>  
+        </form>
 
         <br></br>
         <br></br>
