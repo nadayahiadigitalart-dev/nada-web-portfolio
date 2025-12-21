@@ -3,21 +3,50 @@ import './Contactme.css';
 import drip from "../assets/dribbble-line.png";
 import linked from "../assets/linkedin-fill.png";
 import be from "../assets/behance-fill.png";
+import { Supabase } from '../Supabase';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
  const Contactme = () => {
 
-    const [title,setTitle] = useState("");
-    const [email,setEmail] = useState("");
+    const [sender_name,setsender_name] = useState("");
+    const [sender_email,setsender_email] = useState("");
+    const [sub,setSubject] = useState("");
     const [msg,setMsg] = useState("");
+
+   async function sendMsg(){
+        const res= await Supabase.from("Contact Messages").insert({"sender_name":sender_name, "sender_email":sender_email, "msg":msg});
+
+        console.log()
+    }
+
+    // async function sendMsg(){
+    //     const res= await Supabase.from("Contact Messages").select("*");
+    //      Set
+
+    //     console.log(res);
+    //     getAllsendMsgAPI()
+    // }
+
+
 
 
 
 
     return ( <>
 
+    
+
+
+    <Header/>
+
+    <br></br>
+    <br></br>
+    <br></br>
+
     <div className='cont'>
 
         <div className='right_cont'>
-            <p className='q'>Let`s make something<br></br> great together!</p>
+            <p className='q'>Let`s make something great together!</p>
               <div class="ro_social">
                      <a class="a" href="https://dribbble.com/nada_yahia" > <img src={drip} alt=''/></a>
                       <a class="a" href="https://www.linkedin.com/in/nada-yahia-mostafa/" ><img src={linked} alt=''/></a>
@@ -25,27 +54,53 @@ import be from "../assets/behance-fill.png";
                       </div>
         </div>
 
-    
+        <br></br>
+        <br></br>
+        <br></br>
 
-    <form>
 
+    <form className='form'>
+
+        <div className='row_label'>
+
+<div className='col_l'>
         <label>Name</label>
-        <input onChange={(i)=>{setTitle(i.target.value)}} type='text' />
+        <input onChange={(i)=>{setsender_name(i.target.value)}} type='text' />
+        </div>
+<div className='col_l'>
         
         <label>Email</label>
         {/* <input type='text' /> */}
-        <input onChange={(i)=>{setEmail(i.target.value)}} type='text' />
+        <input onChange={(i)=>{setsender_email(i.target.value)}} type='text' />
+        </div>
+        </div>
 
-        <lebal>Message</lebal>
-        <textares  onChange={(i)=>{setMsg(i.target.value)}} />
-        <button className='send'>Send</button>
+
+         <label>Subject</label>
+        <input onChange={(i)=>{setSubject(i.target.value)}} type='text' />
+
+        <label >Message</label>
+        <textarea className='label' onChange={(i)=>{setMsg(i.target.value)}} />
+        {/* <button className='send'>Send</button> */}
         
         </form>  
 
-        <button onClick={()=>{console.log(title)}}>
-test value</button>    
+        <br></br>
+        <br></br>
+
+
+        <button className='buu' onClick={()=>{console.log(sender_name)}}>
+Send</button>
 
 </div>
+
+<br></br>
+        <br></br><br></br>
+        <br></br>
+         <br></br><br></br>
+        <br></br>
+
+<Footer/>
     
     </> );
  }
