@@ -13,11 +13,36 @@ import Header from '../components/Header';
     const [sub,setSubject] = useState("");
     const [msg,setMsg] = useState("");
 
-   async function sendMsg(){
-        const res= await Supabase.from("Contact Messages").insert({"sender_name":sender_name, "sender_email":sender_email, "msg":msg});
+//    async function sendMsg(){
+//         const res= await Supabase.from("Contact Messages").insert({"sender_name":sender_name, "sender_email":sender_email, "msg":msg});
 
-        console.log()
-    }
+//         console.log()
+//     }
+
+
+    async function sendMsg() {
+  const { data, error } = await Supabase
+    .from("Contact Messages")
+    .insert([
+      {
+        // sender_name: sender_name,
+        // sender_email: sender_email,
+        // subject: sub,
+        // message: msg,
+
+        "sender_name":sender_name, "sender_email":sender_email,
+        "subject": sub, "message": msg
+      }
+    ]);
+
+  if (error) {
+    console.error("Supabase error:", error);
+    alert("Message failed ❌");
+  } else {
+    console.log("Inserted data:", data);
+    alert("Message sent successfully ✅");
+  }
+}
 
     // async function sendMsg(){
     //     const res= await Supabase.from("Contact Messages").select("*");
@@ -88,8 +113,13 @@ import Header from '../components/Header';
         <br></br>
 
 
-        <button className='buu' onClick={()=>{console.log(sender_name)}}>
-Send</button>
+        {/* <button className='buu' onClick={()=>{console.log(sender_name)}}>
+Send</button> */}
+
+<button className='buu' onClick={sendMsg}>
+  Send
+</button>
+
 
 </div>
 
