@@ -247,15 +247,25 @@ const Projects = () => {
           {projects
             .filter((proj) => proj.category === activeCat)
             .map((proj) => (
-              <Link to={`/projects/:projectId/${proj.id}`}  style={{ textDecoration: "none", color: "inherit" }}> 
-              <ProjectsCards
-                key={proj.id}
-                img={proj.cover_img} // assuming cover_img is a URL
-                t={proj.title}
-                p={proj.desc} // or desc depending on your DB
-                // onDelete={() => deleteRow(proj.id)} 
-                />
-                </Link>
+              // <Link to={`/projects/:projectId/${proj.id}`}  style={{ textDecoration: "none", color: "inherit" }}> 
+              // <ProjectsCards
+              //   key={proj.id}
+              //   img={proj.cover_img} // assuming cover_img is a URL
+              //   t={proj.title}
+              //   p={proj.desc} // or desc depending on your DB
+              //   // onDelete={() => deleteRow(proj.id)} 
+              //   />
+              //   </Link>
+
+              <Link to={`/projects/${proj.id}`} style={{ textDecoration: "none", color: "inherit" }}> 
+  <ProjectsCards
+    key={proj.id}
+    img={proj.cover_img}
+    t={proj.title}
+    p={proj.desc} 
+  />
+</Link>
+
             ))}
         </div>
       </section>
