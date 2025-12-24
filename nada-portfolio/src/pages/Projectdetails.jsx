@@ -1,6 +1,7 @@
 // import React from 'react';
-import React, { Component } from 'react';
-
+// import React, { Component } from 'react';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 import Pd from '../components/Pd';
@@ -14,9 +15,52 @@ import group169 from '../assets/Group 169.png';
 import uxui1 from '../assets/3d_2.png';
 import Contact from './../components/Contact';
 import Footer from './../components/Footer';
+import { Supabase } from "../Supabase";
+// import { useParams } from 'react-router-dom';
 
 
 const Projectdetails = () => {
+
+     const [projects, setProjects] = useState([]);
+      // State for active category
+      const [activeCat, setActiveCat] = useState("");
+
+//          const [projects, setProjects] = useState([{
+//         id:"",
+//         title:"",
+//         cover_img:"",
+//         images:""
+// }]);
+    
+
+const { projectId } = useParams();
+
+
+useEffect(() => {
+  if (!projectId) return;
+
+  async function fetchProject() {
+    const { data, error } = await Supabase
+      .from("projects")
+      .select("*")
+      .eq("id", projectId)
+      .single(); // fetch a single row
+
+    if (error) {
+      console.log("Error fetching project:", error);
+    } else {
+      console.log("Project fetched:", data);
+      setProjects([data]); // keep it as array if you want to map over it
+    }
+  }
+
+  fetchProject();
+}, [projectId]);
+
+
+
+
+
     return ( <>
     
     <div className='mid' >
@@ -25,66 +69,29 @@ const Projectdetails = () => {
 
     <Details1 img={uxui1} alt=".."  />
 
-    {/* <div className='details'>
-
-        <div className='box1'>
-            <h1 className='title'>3D Booth Design</h1>
-            <p className='desc'>A modern, interactive 3D booth 
-                experience designed to attract visitors and 
-                communicate brand identity through immersive 
-                visuals and clean spatial layout.</p>
-        </div>
-
-        <div className='box2'>
-            <h2 className='title'>
-                
-                Tools used
-            </h2>
-
+{projects.map((c) => (<>
            
-
-            <div className='tag'>
-               
-                interiordesign
-            </div>
-
-            <div className='tag'>
-               
-                3D
-            </div>
-
-            <div className='tag'>
-                
-                3D design
-            </div>
-        </div>
-
-        <div className='box3'>
-            <h3 className='title'>
-               
-
-
-            </h3>
-        </div> */}
-
-
+       
         <Details2   
-        title0="3D Booth Design"
+        title0={c.title0}
         title1="Tools used"
         title2="Project Overview"
-        tag1="interior design"
-        tag2="3D"
-        tag3="3dDesign"
-        des1="A modern, interactive 3D booth experience 
-        designed to attract visitors and communicate brand 
-        identity through immersive visuals and clean spatial layout."
-        des2="This project focuses on creating a 3D exhibition booth that merges aesthetics, usability, and storytelling. The goal was to design a visually appealing booth that enhances visitor engagement and reflects the brand’s identity while keeping the navigation intuitive and realistic.<br>
-
-Objective: To create a digital booth concept that feels real and can be experienced online or integrated into AR environments for virtual exhibitions."
+        tag1={c.tag1 && c.tag1.length > 0 ? c.tag1[0] : ""}
+      tag2={c.tag1 && c.tag1.length > 1 ? c.tag1[1] : ""}
+      tag3={c.tag1 && c.tag1.length > 2 ? c.tag1[2] : ""}
+        des1={c.desc1}
+        des2={c.desc2}
           
         />
 
-    <img src={group169}  />
+
+    <img src={group169} />
+
+
+{/* group169 */}
+{/* {c.cover_img}  */}
+
+    </>))}
 
     </div>
 

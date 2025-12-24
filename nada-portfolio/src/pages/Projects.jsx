@@ -184,7 +184,7 @@
 
 
 
-// 1️⃣ IMPORTS
+
 import React, { useState, useEffect } from "react";
 import "./Projects.css";
 
@@ -193,8 +193,9 @@ import ProjectsCards from "../components/ProjectsCards";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { Supabase } from "../Supabase";
+import { Link } from "react-router-dom";
 
-// 2️⃣ COMPONENT
+
 const Projects = () => {
   // State for projects from Supabase
   const [projects, setProjects] = useState([]);
@@ -204,7 +205,7 @@ const Projects = () => {
   // Fetch projects from Supabase
   useEffect(() => {
     async function fetchProjects() {
-      const { data, error } = await Supabase.from("projects").select("*");
+      const { data, error } = await Supabase.from("projects").select("*").order("id");
       if (error) {
         console.log("Error fetching projects:", error);
       } else {
@@ -215,6 +216,9 @@ const Projects = () => {
     }
     fetchProjects();
   }, []);
+
+
+
 
   // Get unique categories from fetched projects
   const categories = [...new Set(projects.map((p) => p.category))];
@@ -239,15 +243,19 @@ const Projects = () => {
 
         {/* Projects cards */}
         <div className="cards_p">
+
           {projects
             .filter((proj) => proj.category === activeCat)
             .map((proj) => (
+              <Link to={`/projects/:projectId/${proj.id}`}  style={{ textDecoration: "none", color: "inherit" }}> 
               <ProjectsCards
                 key={proj.id}
                 img={proj.cover_img} // assuming cover_img is a URL
                 t={proj.title}
-                p={proj.description} // or desc depending on your DB
-              />
+                p={proj.desc} // or desc depending on your DB
+                // onDelete={() => deleteRow(proj.id)} 
+                />
+                </Link>
             ))}
         </div>
       </section>

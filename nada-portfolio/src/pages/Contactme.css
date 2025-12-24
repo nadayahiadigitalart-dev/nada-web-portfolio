@@ -12,11 +12,15 @@ line-height: normal;
 input{
        display: flex;
 height: 30px;
-padding: 10px 37px;
+padding: 10px 20px;
 justify-content: flex-start;
 align-items: flex-start;
 gap: 10px;
 align-self: stretch;
+
+font-family: Poppins;
+font-size: 1rem;
+color: #d8d8d8;
 
 border-radius: 20px;
 border: 1px solid #0E8C88;
@@ -94,6 +98,10 @@ line-height: normal;
   border-radius: 1.25rem;
 border: 1px solid #0E8C88;
 background: rgba(217, 217, 217, 0.01);
+
+font-family: Poppins;
+font-size: 1rem;
+color: #d8d8d8;
 
 display: flex;
 height: 5.375rem;

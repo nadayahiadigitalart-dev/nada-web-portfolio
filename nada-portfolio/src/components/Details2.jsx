@@ -16,7 +16,7 @@ const Details2 = (props) => {
 
         <div className='box2'>
             <h2 className='title'>
-                {props.title1}
+               Tools Used
                 
             </h2>
 
