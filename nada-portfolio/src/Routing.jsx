@@ -14,8 +14,8 @@ import Contactme from './pages/Contactme';
         <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/3D projects' element={<Projectdetails />} />
-            <Route path='/3D projectss' element={<THREEDProj />} />
+            <Route path='/projectdetails' element={<Projectdetails />} />
+            {/* <Route path='/3D projectss' element={<THREEDProj />} /> */}
             <Route path='/projects' element={<Projects />} />
             <Route path='/projects/:projectId' element={<Projectdetails />} />
             <Route path='/contact' element={<Contactme />} />
