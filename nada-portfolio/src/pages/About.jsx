@@ -11,6 +11,7 @@ import gameux from '../assets/sandoftime.png';
 import svg_ai from '../assets/aidesignmentor.svg';
 import ieee_events from '../assets/ieee_events.png';
 import { Supabase } from '../Supabase';
+import Header from '../components/Header';
 
 
 const About = () => {
@@ -29,7 +30,7 @@ const About = () => {
         useEffect(()=>{
             
         async function CallGetAPI() {
-            const projects = await Supabase.from("about").select("*")
+            const about = await Supabase.from("about").select("*").single()
             setAbout(about.data);
             // console.log(projects);
     
@@ -48,12 +49,14 @@ const About = () => {
 
     return ( <>
 
+
 {/* {about[0].category.map((c)=>{ */}
                 {/* return <> */}
                  {/* <p>{c}</p> */}
             
 
     <div className='main'>
+    <Header />
 
         <section className='row'>
             <div className='col'>
@@ -69,20 +72,13 @@ const About = () => {
         <div className='cent_roles'>
             <p className='t'>Roles I experenced while working on projects</p>
             <div className='col_roles'>
-            <R_Row t={about.role1} p='As an Interaction designer in this project, 
-            I worked on creating wireframes, uderstanding how users interact & lead him in VR game 
-            and was responsible for making animations in website, game.'  src={about.src1} />
+            <R_Row t={about.role1} p={about.par1}  src={about.src1} />
 
 {/* gameux    svg_ai    ieee_events */}
 
-             <R_Row_reverse t={about.role2} p='I had the opportunity to act as product manager 
-             in a team. where I gained leadership skills and understand the relationship between 
-             UX UI Design &  business needs.' src={about.src1} />
+             <R_Row_reverse t={about.role2} p={about.par2} src={about.src2} />
 
-             <R_Row t={about.role3} p='As a UX UI designer I worked with team to create an 
-             official website for IEEE. I analyzing usability issues & suggested what to enhance 
-             or change, created mood board &  collaborating closely with my team to create the final 
-             handoff-ready design.' src={about.src1} />
+             <R_Row t={about.role3} p={about.par3} src={about.src3} />
             </div>
         </div>
 

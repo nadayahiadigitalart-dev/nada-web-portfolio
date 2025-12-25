@@ -4,6 +4,7 @@ import Tag from './Tag';
 
 
 import './Pcard.css';
+import { Link } from 'react-router-dom';
 
 
 const Pcard = (props) => {
@@ -39,9 +40,12 @@ const Pcard = (props) => {
                <br></br><br></br>
               {/* </div> */}
               <div className={`reveal ${showImg ? "show" : ""}`}>
-              <a className="a" href="UXUI_Projectdetails1.html">
-               <Button button="Explore Work"/>
-              </a>
+              {/* <a className="a" href="UXUI_Projectdetails1.html"> */}
+              
+              
+               <Button button={props.b}/>
+              
+              {/* </a> */}
               </div>
               
             </div>

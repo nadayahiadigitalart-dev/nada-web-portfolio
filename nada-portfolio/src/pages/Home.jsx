@@ -31,6 +31,8 @@ import F from "../assets/dev_card.png";
 import G from "../assets/graphic_design_tshirt_card.png";
 
 import { Helmet } from "react-helmet";
+import { Supabase } from "../Supabase";
+import { Link } from "react-router-dom";
 
 
 // import BounceCards from './BounceCards'
@@ -52,14 +54,23 @@ const transformStyles = [
 ];
 
 
+async function seo() {
+  const res = await Supabase.from("SEO").select("*")
+}
+
+// async function p() {
+//   const p = await Supabase.from("projects").select("*")
+// }
+
+
 
 const Home = () => {
   return (
     <>
 
     <Helmet>
-        <title>Nada Yahia | UX/UI Designer</title>
-        <meta name="description" content="This is the about page" />
+        <title>{seo.meta_title}</title>
+        <meta name="description" content={seo.meta_description} />
         <meta property="og:title" content="About Us" />
         <meta property="og:image" content="/images/about.png" />
           <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
@@ -127,7 +138,10 @@ const Home = () => {
                 immersive 3D and AR websites, and created UX driven games
               </p>
             </div>
+
+            <Link to="/about" style={{ textDecoration: "none", color: "inherit" }}>
               <Button button="Get to know me" />
+              </Link>
 
             {/* <img src={uxuiworks} alt="ux_ui_works" /> */}
           </div>
@@ -156,10 +170,26 @@ const Home = () => {
 
       <section className="proj_sec">
 
-      <Pcard t="UX UI Design" img={uxui} />
+      {/* <Link to={`/projects/${p.category}`} style={{ textDecoration: "none", color: "inherit" }}> */}
+
+      <Pcard t="UX UI Design" img={uxui} b="View Projects" />
+
+      {/* </Link> */}
+
+
+      
           <Pcard t="3D Design" img={D}  />
+
+
+
+
           <Pcard t="Front-end Development" img={F} />
+
+
+
+
           <Pcard t="Graphic Design" img={G}  />
+
 
           </section>
 
