@@ -74,7 +74,7 @@
 
 .category-buttons button {
   padding: 10px 20px;
-  border: 1px solid #0E8C88;
+  border: 1px solid #0e8c8847;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -205,6 +205,11 @@ gap: 0.625rem;
 border-radius: 1.25rem;
 border: 1px solid #0E8C88;
 background: rgba(9, 114, 110, 0.45);
+}
+
+.button:hover, button.active{
+background: rgba(9, 114, 110, 0.06);
+
 }
 
 .b{

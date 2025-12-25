@@ -67,6 +67,11 @@ image pop
   transform: scale(1.05);
 } */
 
+.v{
+background: rgba(13, 103, 101, 0.551);
+width: 50px;
+}
+
 .ca {
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;

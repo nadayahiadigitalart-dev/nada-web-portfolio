@@ -263,6 +263,7 @@ const Projects = () => {
     img={proj.cover_img}
     t={proj.title}
     p={proj.desc} 
+    // on="View Project"
   />
 </Link>
 

@@ -13,6 +13,12 @@ import ieee_events from '../assets/ieee_events.png';
 
 
 const About = () => {
+
+    
+
+
+
+
     return ( <>
 
     <div className='main'>

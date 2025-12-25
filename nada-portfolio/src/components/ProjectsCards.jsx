@@ -14,7 +14,7 @@ const ProjectsCards = (props) => {
                 <p className="f24">{props.t}</p>
                 <p className="f14">{props.p}</p>
       {/* <Link to={`/projects/:projectId/${c.id}`}> */}
-    <button  onClick={props.onDelete}/>
+    <button  className='v'>View Project</button>
     
 {/* </Link> */}
       </div>

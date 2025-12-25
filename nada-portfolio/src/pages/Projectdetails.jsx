@@ -42,7 +42,6 @@ const Projectdetails = () => {
         {project ? (
           <>
         <Details1
-          key={project.id}
          img={project.heroimg} alt=".." />
 
             <Details2
