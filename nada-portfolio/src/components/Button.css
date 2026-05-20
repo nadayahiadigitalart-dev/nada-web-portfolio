@@ -1,7 +1,7 @@
 .lined_bu{
    
     /* background: rgba(23, 155, 150, 0.552); */
-    background-color: rgba(155, 43, 23, 0.552);
+    /* background-color: rgba(155, 43, 23, 0.552); */
 
 padding: 0.4375rem 1.375rem;
 
@@ -17,12 +17,34 @@ border-radius: 1.25rem;
 border: 1px solid #0E8C88;
  margin: 0px;
 
+/* background: #0e8c8876; */
+   
+background:  #064947f7;
+
+cursor: pointer;
+
+
 }
 
 .lined_bu:hover{
-border-radius: 1.25rem;
+/* border-radius: 1.25rem;
 border: 1px solid #0E8C88;
-/* background: #0E8C88; */
-background: #0e8c8876;
+
+background: #042e2d; */
+
+background: linear-gradient(
+    135deg,
+    #0E8C88,
+    #064947f7
+  );
+
+  border-color: #13b3ad;
+
+  transform: translateY(-2px);
+  transform: 0.25s ease;
+
+  box-shadow:
+    0 10px 30px rgba(14, 140, 136, 0.133);
+
 
 }

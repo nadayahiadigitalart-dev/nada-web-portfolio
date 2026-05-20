@@ -12,6 +12,8 @@ import svg_ai from '../assets/aidesignmentor.svg';
 import ieee_events from '../assets/ieee_events.png';
 import { Supabase } from '../Supabase';
 import Header from '../components/Header';
+import { Helmet } from 'react-helmet';
+import Footer from '../components/Footer';
 
 
 const About = () => {
@@ -25,7 +27,11 @@ const About = () => {
     // }]);
 
             // const [about, setAbout] = useState([{}]);
+async function seo() {
+  const res = await Supabase.from("SEO").select("*")
+  .eq("page_title", "About");
 
+}
     
         useEffect(()=>{
             
@@ -41,18 +47,28 @@ const About = () => {
     
         },[]
         )
-    
-    
-
-
-
+   
 
     return ( <>
+
+    
+    <Helmet>
+        <title>{seo.meta_title}</title>
+        <meta name="description" content={seo.meta_description} />
+        <meta property="og:title" content="About Us" />
+        <meta property="og:image" content="/images/about.png" />
+          <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+      </Helmet>
 
 
 {/* {about[0].category.map((c)=>{ */}
                 {/* return <> */}
                  {/* <p>{c}</p> */}
+
+
+                 <div data-speed="0.8"></div>
+<div data-speed="2.0"></div>
+<div data-speed="1.2"></div>
             
 
     <div className='main'>
@@ -74,7 +90,7 @@ const About = () => {
             <div className='col_roles'>
             <R_Row t={about.role1} p={about.par1}  src={about.src1} />
 
-{/* gameux    svg_ai    ieee_events */}
+
 
              <R_Row_reverse t={about.role2} p={about.par2} src={about.src2} />
 
@@ -84,6 +100,10 @@ const About = () => {
 
 
     </div>
+
+    <br></br><br></br>
+
+    <Footer />
 
 
 {/* </>})} */}

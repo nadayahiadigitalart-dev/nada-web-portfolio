@@ -1,0 +1,12 @@
+.scroll-images {
+  position: relative;
+  height: 300vh; /* controls scroll duration */
+}
+
+.scroll-images img {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}

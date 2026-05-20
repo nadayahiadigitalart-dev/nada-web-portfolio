@@ -6,6 +6,7 @@ import be from "../assets/behance-fill.png";
 import { Supabase } from '../Supabase';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import DotGrid from '../components/DotGrid';
  const Contactme = () => {
 
     const [sender_name,setsender_name] = useState("");
@@ -59,7 +60,19 @@ import Header from '../components/Header';
 
     return ( <>
 
-    
+          <div style={{ width: '100%', height: '900px', position: 'absolute' , marginTop: '0px' ,zIndex: -5,    }}>
+  <DotGrid
+    dotSize={5}
+    gap={15}
+    baseColor="#09292933"
+    activeColor="#0E8C88"
+    proximity={90}
+    shockRadius={250}
+    shockStrength={5}
+    resistance={750}
+    returnDuration={1.5}
+  />
+  </div>
 
 
     <Header/>

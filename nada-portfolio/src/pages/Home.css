@@ -5,10 +5,29 @@ body{
 
 .bodyy{
   width: 100%;
+  height: auto;
   position: absolute;
-  z-index: -1;
-  top:0px;
+  z-index: -5;
+  /* top:0px; */
 
+  /* z-index: ; */
+
+}
+
+.dotGridBackground {
+  position: fixed; /* stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind everything else */
+  pointer-events: none; /* so clicks pass through */
+}
+
+
+.position, .about_bg, .proj_sec, .photoss, .cente, footer {
+  position: relative;
+  z-index: 1;
 }
 
 .relative{
@@ -18,15 +37,22 @@ body{
 
 
 .about_bg{
-  background-image: url(../assets/about_bg.svg);
+  /* background-image: url(../assets/about_bg.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
   /* margin-bottom: 200px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-top: 800px; */
+  /* gap: 900px; */
 }
 
   .ab{
-        margin-top: 100px;
+        margin-top: 550px;
         display: flex;
         flex-direction: row;
         gap: 5%;
@@ -71,12 +97,22 @@ line-height: normal;
     justify-content: center;
     align-items: center;
 
+    position: absolute;
+    z-index: -1;
+
+    margin-top: 360px;
+    /* margin-top: 1460px; */
+
+    /* margin-bottom: 1400px; */
+
+/* margin-bottom: 100px; */
    
 }
 
 
 .bgvideo{
-
+width: 900px;
+height: 500px;
   border-radius: 1rem;
 border: 1px solid #0E8C88;
 
@@ -125,9 +161,20 @@ margin: 0px;
 font-family: Poppins;
 font-size: 1rem;
 font-style: normal;
-font-weight: 280;
+font-weight: 300;
 line-height: normal;
 width: 500px;
+}
+
+.f16_22{
+   color: #DBDBDB;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+width: 700px;
+text-align: center;
 }
 
 .z2{
@@ -177,7 +224,7 @@ line-height: normal;
 font-family: Poppins;
 font-size: 1rem;
 font-style: normal;
-font-weight: 280;
+font-weight: 300;
 line-height: normal;
 width: 500px;
 }
@@ -191,6 +238,21 @@ width: 500px;
   justify-content: center;
   gap: 20px;
 
+
+}
+
+.zindex{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.position{
+
+  position: relative;
+  z-index: 2;
+  /* margin-bottom: 00px; */
 }
 
 
@@ -200,4 +262,232 @@ width: 500px;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+
+.scroll-images {
+  position: relative;
+  height: 200vh; /* MUST be taller than 100vh */
+  z-index: 5;
+}
+
+.scroll-images img {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+
+.hor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.big_hor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* gap: 20px; */
+}
+
+.photoss{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.colll{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.colll2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.muegyvid{
+  width: 670px;
+  border-radius: 20px;
+}
+
+.aylavid{
+  width: 480px;
+  width: 340px;
+  border-radius: 20px;
+}
+
+.zoovid{
+  width: 400px;
+  /* height: 200px; */
+  border-radius: 20px;
+
+}
+
+/* .scroll-images {
+  position: relative;
+  height: 100vh; 
+  top: 0px;
+} */
+
+/* .scroll-images img {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+} */
+
+.scroll-images img {
+  transition: opacity 0.95s ease;
+}
+
+
+.absol{
+  width: 80%;
+  position: absolute;
+  z-index: 3;
+
+  top: -60px;
+  left: 195px;
+  /* right: 10px; */
+
+  margin-bottom: 100px;
+
+
+   opacity: 0;
+  visibility: hidden;
+  animation: showScroll 0.6s ease forwards;
+  animation-delay: 4s; /* ⏱ 7 seconds */
+
+  /* opacity: 0;
+  transition: opacity 0.6s ease; */
+}
+
+@keyframes showScroll {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* .resttt{
+  margin-top: 0px;
+} */
+
+
+/* .absol.show {
+  opacity: 1;
+} */
+
+
+/* .zindex_rest_of_page{
+   position: absolute;
+  z-index: 4;
+} */
+
+
+
+
+@media (max-width: 768px) {
+  .vid{
+    width: 100%;
+  }
+
+  .bgvideo{
+    width: 400px;
+    height: 230px;
+  }
+
+  .ab{
+    margin-top: 400px;
+    flex-direction: column-reverse;
+  }
+
+  .f32{
+    font-size: 1rem;
+  }
+
+  .works{
+    width: 100%;
+    height: 300px;
+  }
+
+  .z2{
+     width: 100%;
+    height: 300px;
+  }
+
+  .photoss{
+    flex-direction: column;
+  }
+
+  .colll{
+    width: 300px;
+  }
+
+  .colll2{
+    width: 300px;
+  }
+
+  .hor{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .muegyvid{
+    width: 100%;
+    /* height: 300px; */
+  }
+
+  .respon{
+    width: 100%;
+  }
+
+  .respon2{
+    width: 300px;
+  }
+
+  .zoovid{
+    width: 100%;
+  }
+
+  .f16_2{
+    font-size: 1rem;
+    width: 490px;
+  }
+
+  .f16_22{
+     font-size: 1rem;
+    width: 510px;
+  }
+
+  .cente{
+    /* width: 300px; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blogss{
+width: 100%;
+/* height: 300px; */
+  }
+
+  .custom-bounceCards{
+    width: 300px;
+  }
 }
